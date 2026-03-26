@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Premium | ‎العرش الرقمي لعلامات الشرق الأوسط النخبوية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ========== 皇室级设计系统 ========== */
+        :root {
+            --color-black: #0A0A0A;
+            --color-gold: #D4AF37;
+            --color-gold-light: #F4E4A6;
+            --color-dark-blue: #0f172a;
+            --color-white: #FFFFFF;
+            --color-gray: #cbd5e1;
+            --shadow-lg: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+            --shadow-gold: 0 15px 40px rgba(212, 175, 55, 0.4);
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* 丝绸质感背景 */
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(15, 23, 42, 0.2) 0%, transparent 50%),
+                linear-gradient(180deg, #050505 0%, var(--color-black) 100%);
+            color: var(--color-gray);
+            line-height: 1.8;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .section { padding: 140px 0; position: relative; }
+        
+        /* 皇室级字体系统 */
+        h1, h2, h3, h4 { 
+            font-weight: 900; 
+            line-height: 1.1; 
+            color: var(--color-white);
+            letter-spacing: -0.5px;
+        }
+        h1 { font-size: 4.5rem; margin-bottom: 2.5rem; }
+        h2 { font-size: 3.5rem; margin-bottom: 1.8rem; }
+        h3 { font-size: 2.5rem; margin-bottom: 1.2rem; }
+        p.lead { font-size: 1.4rem; color: var(--color-gray); max-width: 800px; }
+        
+        /* 黄金渐变文字 */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4E4A6 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* ========== 皇室级导航栏 ========== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 25px 0;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            transition: var(--transition);
+        }
+        .navbar.scrolled { background: rgba(10, 10, 10, 0.99); }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* LOGO 皇室徽章系统 */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .logo-symbol {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, var(--color-gold) 0%, #b8941f 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--color-black);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        .logo-symbol::after {
+            content: '';
+            position: absolute;
+            top: -4px; left: -4px; right: -4px; bottom: -4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.1); opacity: 0; }
+        }
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links { display: flex; gap: 50px; }
+        .nav-links a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 8px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--color-gold); }
+        
+        /* ========== 皇室级按钮系统 ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 50px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            gap: 15px;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: right 0.7s ease;
+        }
+        .btn:hover::before { right: 100%; }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF37 0%, #b8941f 100%);
+            color: var(--color-black);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.6);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--color-gold);
+            border: 2px solid var(--color-gold);
+        }
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* ========== 英雄区域 - 皇室级欢迎 ========== */
+        .hero {
+            padding-top: 220px;
+            padding-bottom: 180px;
+            position: relative;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(15, 23, 42, 0.3) 0%, transparent 50%);
+        }
+        .hero::before {
+            content: '👑';
+            position: absolute;
+            top: 120px;
+            right: 10%;
+            font-size: 8rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .hero h1 { 
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+        .hero p.lead { 
+            font-size: 1.6rem;
+            color: #e2e8f0;
+            max-width: 900px;
+            margin-bottom: 3.5rem;
+        }
+        .hero-buttons { display: flex; gap: 25px; margin-top: 3rem; }
+        
+        /* ========== 适用人群 - 皇室级匹配 ========== */
+        .audience {
+            background: rgba(15, 23, 42, 0.3);
+            border-radius: 40px;
+            margin: 100px 0;
+            padding: 80px 60px;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .audience::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .audience h2 { text-align: center; margin-bottom: 3rem; }
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .audience-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .audience-card:hover {
+            transform: translateY(-20px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-lg);
+        }
+        .audience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .audience-card:hover::before { opacity: 1; }
+        
+        .audience-icon {
+            font-size: 4.5rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            filter: drop-shadow(0 5px 15px rgba(212, 175, 55, 0.3));
+        }
+        .audience-card h3 { 
+            font-size: 2.2rem; 
+            margin-bottom: 20px;
+            color: var(--color-gold);
+        }
+        .audience-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--color-gold);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        
+        /* ========== 温馨一刻 - 情感叙事 ========== */
+        .warmth-moment {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+            border-radius: 40px;
+            padding: 100px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .warmth-moment::before {
+            content: '💎';
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            font-size: 6rem;
+            opacity: 0.1;
+        }
+        .warmth-moment::after {
+            content: '✨';
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            font-size: 6rem;
+            opacity: 0.1;
+        }
+        
+        .warmth-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            display: inline-block;
+            animation: gentlePulse 3s ease-in-out infinite;
+        }
+        @keyframes gentlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .warmth-text {
+            font-size: 1.8rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            font-style: italic;
+            position: relative;
+        }
+        .warmth-text::before, .warmth-text::after {
+            content: '"';
+            font-size: 4rem;
+            color: var(--color-gold);
+            opacity: 0.5;
+            position: absolute;
+        }
+        .warmth-text::before { top: -30px; right: -20px; }
+        .warmth-text::after { bottom: -50px; left: -20px; }
+        
+        /* ========== 皇室级案例展示 ========== */
+        .portfolio { position: relative; }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 50px;
+            margin-top: 80px;
+        }
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-20px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: var(--transition);
+        }
+        .portfolio-item:hover .portfolio-img { filter: grayscale(0%); }
+        
+        .portfolio-content { padding: 40px; }
+        .portfolio-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--color-gold);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        /* 新增：案例对比模块 */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .comparison-before, .comparison-after {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .comparison-before {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+        
+        .comparison-after {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        
+        .comparison-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .comparison-before .comparison-title {
+            color: #f87171;
+        }
+        
+        .comparison-after .comparison-title {
+            color: #4ade80;
+        }
+        
+        .comparison-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-before .comparison-value {
+            color: #fca5a5;
+        }
+        
+        .comparison-after .comparison-value {
+            color: #86efac;
+        }
+        
+        .comparison-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        .comparison-divider {
+            text-align: center;
+            align-self: center;
+            font-size: 2rem;
+            color: var(--color-gold);
+        }
+        
+        /* ========== 皇室级召唤区域 ========== */
+        .cta {
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border-radius: 40px;
+            padding: 120px 60px;
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            overflow: hidden;
+        }
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+        }
+        
+        .cta h2 { font-size: 4rem; margin-bottom: 2rem; }
+        .cta p.lead { 
+            font-size: 1.6rem; 
+            color: #e2e8f0;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .contact-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .contact-icon { font-size: 4rem; margin-bottom: 25px; }
+        .contact-card h3 { font-size: 2rem; margin-bottom: 15px; }
+        .contact-card p { color: #a0a0a0; margin-bottom: 25px; }
+        
+        .contact-email {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-family: 'Cairo', monospace;
+            font-size: 1.2rem;
+            color: var(--color-gold);
+            margin: 20px 0;
+            word-break: break-all;
+            direction: ltr;
+        }
+        
+        /* ========== 价格锚点模块 ========== */
+        .price-anchor {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+            border-radius: 40px;
+            padding: 80px 60px;
+            margin: 100px 0;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-anchor::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.2) 0%, transparent 50%);
+        }
+        
+        .price-anchor h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .price-anchor p.lead {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .pricing-card.featured {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            right: 50%;
+            transform: translateX(50%);
+            background: linear-gradient(135deg, #D4AF37 0%, #b8941f 100%);
+            color: var(--color-black);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+        
+        .pricing-name {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--color-gold);
+        }
+        
+        .pricing-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            color: var(--color-white);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: right;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-check {
+            color: var(--color-gold);
+            margin-left: 10px;
+        }
+        
+        .feature-none {
+            color: #64748b;
+            margin-left: 10px;
+        }
+        
+        .pricing-value {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        /* ========== 皇室级页脚 ========== */
+        .footer {
+            background: rgba(5, 5, 5, 0.95);
+            padding: 100px 0 50px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand h3 { 
+            font-size: 2.5rem; 
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .footer-brand p { font-size: 1.1rem; color: #94a3b8; }
+        
+        .footer-links h4 { 
+            font-size: 1.4rem; 
+            margin-bottom: 25px;
+            color: var(--color-gold);
+        }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 15px; }
+        .footer-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        .footer-links a:hover { 
+            color: var(--color-gold); 
+            transform: translateX(5px);
+        }
+        
+        .payment-badges {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--color-gold);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        /* ========== 响应式设计 ========== */
+        @media (max-width: 1200px) {
+            h1 { font-size: 4rem; }
+            h2 { font-size: 3rem; }
+            .container { padding: 0 30px; }
+            .pricing-grid { grid-template-columns: 1fr; gap: 40px; }
+            .pricing-card.featured { transform: scale(1); }
+            .pricing-card.featured:hover { transform: translateY(-10px); }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.5rem; }
+            h3 { font-size: 2rem; }
+            .section { padding: 80px 0; }
+            .hero { padding: 180px 0 100px; }
+            .nav-links { display: none; }
+            .hero-buttons { flex-direction: column; }
+            .audience-grid, .portfolio-grid, .contact-options { grid-template-columns: 1fr; }
+            .audience, .warmth-moment, .cta, .price-anchor { padding: 50px 30px; }
+            .comparison { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 皇室级导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <div class="logo-symbol">👑</div>
+                <div class="logo-text">Diamond Premium</div>
+            </div>
+            <div class="nav-links">
+                <a href="#audience">لمن نصنع العرش</a>
+                <a href="#portfolio">سجلات النجاح</a>
+                <a href="#pricing">مقاييس القيمة</a>
+                <a href="#cta">استدعاء ملكي</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 皇室级英雄区 -->
+    <section class="hero">
+        <div class="container">
+            <h1>ليس موقعاً إلكترونياً..<br><span class="text-gold-gradient">عرشاً رقمياً</span> لعراقتك التجارية</h1>
+            <p class="lead">نحن لا نبني مواقع. نصنع ممالك رقمية تليق بثقل اسمك في الرياض ودبي والدوحة. حيث يتحول كل زائر إلى سفير، وكل نقرة إلى إرث.</p>
+            <div class="hero-buttons">
+                <a href="#cta" class="btn btn-primary">👑 طلب استشارة ملكية</a>
+                <a href="#portfolio" class="btn btn-outline">📜 مطالعة سجلات النجاح</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 适用人群 - لمن نصنع العرش -->
+    <section id="audience" class="section">
+        <div class="container">
+            <div class="audience">
+                <h2 class="text-center">لمن نصنع العرش؟</h2>
+                <p class="lead text-center">نختار عملاءنا كما تختار المجوهرات جوهرتها. نحن نخدم من يستحقون فقط:</p>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <div class="audience-icon">👑</div>
+                        <h3>أصحاب العلامات الفاخرة</h3>
+                        <p>مصممي المجوهرات، بيوت الأزياء الملكية، مصنعي السيارات الفاخرة. من يحتاج موقعاً يكون امتداداً لفخامة منتجاته، لا مجرد نافذة عرض.</p>
+                        <div class="audience-tag">ميزانية: ٥٠ ألف ريال+</div>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">🏰</div>
+                        <h3>البيوت التجارية العريقة</h3>
+                        <p>العائلات التي تحمل إرثاً تجارياً يمتد لعقود. من يحتاج إلى ترجمة هيبتهم الواقعية إلى حضور رقمي يليق بتاريخهم.</p>
+                        <div class="audience-tag">ميزانية: ٣٠ ألف ريال+</div>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">🚀</div>
+                        <h3>الرؤيويون الجدد</h3>
+                        <p>الشركات الناشئة التي تخطط للسيطرة على السوق من اليوم الأول. من يرفض أن يكون موقعهم "عاديًا" حتى لو كانوا جددًا.</p>
+                        <div class="audience-tag">ميزانية: ٢٠ ألف ريال+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 温馨一刻 - لحظة الدفء -->
+    <section id="warmth" class="section">
+        <div class="container">
+            <div class="warmth-moment">
+                <div class="warmth-icon">🤝</div>
+                <h2>ليست مجرد خدمة.. إنها رحلة مشتركة</h2>
+                <p class="warmth-text">
+                    في مكتبنا، لا تسمع كلمة "عميل". تسمع "شريك". لأننا نعرف أن وراء كل موقع أحلام رجل أو امرأة. أحلام بالعطاء، بالتميز، بترك أثر. نحن هنا لنكون اليد التي ترفع هذا الحلم إلى حيث يستحق. لنسهر معك على التفاصيل كما تسهر على أولادك. لنصنع لك شيئاً تفتخر به كلما فتحت هاتفك، كما تفتخر بإنجازاتك. هذه ليست معاملة تجارية، هذه قرابة مهنية.
+                </p>
+                <a href="#cta" class="btn btn-outline">💬 دعنا نتشارك الحلم</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 皇室级案例展示 -->
+    <section id="portfolio" class="section portfolio">
+        <div class="container">
+            <h2 class="text-center">سجلات النجاح التي نعتز بها</h2>
+            <p class="lead text-center">كل قصة نجاح هنا هي سبب لوجودنا. نحن لا نعرض أعمالاً، نعرض شراكات كتبت التاريخ.</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ذهب الرياض" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">مجوهرات ملكية</span>
+                        <h3>ذهب الرياض</h3>
+                        <p>تحول كامل من ورشة تقليدية إلى منصة تبيع القطع النادرة بأرقام خيالية. الموقع نفسه أصبح علامة تجارية.</p>
+                        
+                        <!-- 新增：案例对比模块 -->
+                        <div class="comparison">
+                            <div class="comparison-before">
+                                <div class="comparison-title">قبل Diamond Premium</div>
+                                <div class="comparison-value">٣٤٠,٠٠٠ ريال</div>
+                                <div class="comparison-label">مبيعات شهرية</div>
+                            </div>
+                            <div class="comparison-divider">→</div>
+                            <div class="comparison-after">
+                                <div class="comparison-title">بعد Diamond Premium</div>
+                                <div class="comparison-value">١,١٠٠,٠٠٠ ريال</div>
+                                <div class="comparison-label">مبيعات شهرية</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1563178577-7e13a34d5b71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="عبير الشرق" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">عطور فاخرة</span>
+                        <h3>عبير الشرق</h3>
+                        <p>إطلاق علامة عطور رقمية بالكامل مع تكامل مدى والدفع عند الاستلام. تحول كل زائر إلى عميل دائم.</p>
+                        
+                        <!-- 新增：案例对比模块 -->
+                        <div class="comparison">
+                            <div class="comparison-before">
+                                <div class="comparison-title">قبل Diamond Premium</div>
+                                <div class="comparison-value">١٨٪</div>
+                                <div class="comparison-label">معدل التحويل</div>
+                            </div>
+                            <div class="comparison-divider">→</div>
+                            <div class="comparison-after">
+                                <div class="comparison-title">بعد Diamond Premium</div>
+                                <div class="comparison-value">٤٧٪</div>
+                                <div class="comparison-label">معدل التحويل</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格锚点模块 -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="price-anchor">
+                <h2>اختر عرشك الرقمي</h2>
+                <p class="lead">ثلاثة مسارات، واحد فقط يحقق لك عائداً على الاستInvestment يليق بفخامة علامتك.</p>
+                
+                <div class="pricing-grid">
+                    <!-- Pearl 套餐 -->
+                    <div class="pricing-card">
+                        <div class="pricing-name">لؤلؤة</div>
+                        <div class="pricing-price">$١,٩٩٧</div>
+                        <ul class="pricing-features">
+                            <li><span class="feature-check">✓</span> موقع ثنائي اللغة (عربي/إنجليزي)</li>
+                            <li><span class="feature-check">✓</span> تصميم متجاوب مع جميع الأجهزة</li>
+                            <li><span class="feature-check">✓</span> ٥ صفحات رئيسية</li>
+                            <li><span class="feature-none">✗</span> تكامل المدفوعات المحلية (مدى، STC Pay)</li>
+                            <li><span class="feature-none">✗</span> CDN مخصص للشرق الأوسط</li>
+                            <li><span class="feature-none">✗</span> صيانة ودعم لمدة سنة</li>
+                        </ul>
+                        <div class="pricing-value">للعلامات الناشئة التي تبحث عن وجود رقمي أساسي</div>
+                    </div>
+                    
+                    <!-- Diamond 套餐 (特色推荐) -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">الأكثر قيمة</div>
+                        <div class="pricing-name">ماسي</div>
+                        <div class="pricing-price">$٤,٩٩٧</div>
+                        <ul class="pricing-features">
+                            <li><span class="feature-check">✓</span> <strong>كل ما في "لؤلؤة" وأكثر</strong></li>
+                            <li><span class="feature-check">✓</span> تكامل كامل مع مدى، STC Pay، Apple Pay</li>
+                            <li><span class="feature-check">✓</span> CDN مخصص للشرق الأوسط (سرعة تحميل &lt;٢ ثانية)</li>
+                            <li><span class="feature-check">✓</span> صيانة ودعم فني لمدة سنة كاملة</li>
+                            <li><span class="feature-check">✓</span> تحسين محركات البحث للمنطقة (SEO)</li>
+                            <li><span class="feature-check">✓</span> ١٠ صفحات مع تصميم مخصص</li>
+                        </ul>
+                        <div class="pricing-value"><strong>يوفر ٣٦٪</strong> مقارنة بشراء الخدمات كل على حدة</div>
+                    </div>
+                    
+                    <!-- Crown 套餐 -->
+                    <div class="pricing-card">
+                        <div class="pricing-name">تاجي</div>
+                        <div class="pricing-price">$٩,٩٩٧</div>
+                        <ul class="pricing-features">
+                            <li><span class="feature-check">✓</span> <strong>كل ما في "ماسي" وأكثر</strong></li>
+                            <li><span class="feature-check">✓</span> ثلاث لغات (عربي، إنجليزي، فرنسي)</li>
+                            <li><span class="feature-check">✓</span> تصميم وتجربة مستخدم مخصصة بالكامل</li>
+                            <li><span class="feature-check">✓</span> تكامل أنظمة CRM وERP</li>
+                            <li><span class="feature-check">✓</span> تدريب فريقك على إدارة المحتوى</li>
+                            <li><span class="feature-check">✓</span> دعم على مدار الساعة طوال أيام الأسبوع</li>
+                        </ul>
+                        <div class="pricing-value">للشركات التي تبحث عن شريك رقمي كامل</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#cta" class="btn btn-primary">👑 احصل على استشارة ملكية مجانية</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 皇室级召唤区 -->
+    <section id="cta" class="section">
+        <div class="container">
+            <div class="cta">
+                <h2>هل أنت مستعد لعرشك الرقمي؟</h2>
+                <p class="lead">حدد موعد استشارة ملكية مدتها ٤٥ دقيقة. لن نتحدث عن الأسعار أولاً، بل عن رؤيتك، أحلامك، وما تريد أن يقال عن علامتك بعد عشر سنوات.</p>
+                <div class="contact-options">
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <h3>محادثة خاصة على Discord</h3>
+                        <p>للأسئلة السريعة والبدء الفوري. نحن موجودون عندما تحتاجنا.</p>
+                        <a href="https://discord.com/users/1480914309189206018" target="_blank" class="btn btn-primary" style="width: 100%;">فتح Discord الآن</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>رسالة ملكية مفصلة</h3>
+                        <p>اكتب لنا برسالة تعبر عن رؤيتك. نرد بخطة عمل أولية خلال ١٢ ساعة.</p>
+                        <div class="contact-email">cxfloveyou520@outlook.com</div>
+                        <a href="mailto:cxfloveyou520@outlook.com?subject=طلب استشارة ملكية - Diamond Premium&body=السادة Diamond Premium،%0D%0A%0D%0Aأنا مهتم بالحصول على استشارة حول مشروعي. أحلم بموقع..." class="btn btn-outline" style="width: 100%;">📝 كتابة رسالة مفصلة</a>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; color: #94a3b8; font-size: 1rem;">نعدك: حتى لو لم نتعاون، ستخرج من هذه الاستشارة بخطة واضحة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 皇室级页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Diamond Premium</h3>
+                    <p>لسنا مبرمجين. نحن بنَّاء عروش رقمية للذين يرفضون أن يكونوا عاديين.</p>
+                    <div class="payment-badges">
+                        <div class="badge">مدى</div>
+                        <div class="badge">STC Pay</div>
+                        <div class="badge">Apple Pay</div>
+                        <div class="badge">تحويل بنكي آمن</div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>شركاء النجاح</h4>
+                    <ul>
+                        <li><a href="#audience">لمن نصنع؟</a></li>
+                        <li><a href="#portfolio">سجلاتنا</a></li>
+                        <li><a href="#pricing">مقاييس القيمة</a></li>
+                        <li><a href="#cta">ابدأ الرحلة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>طريق الملك</h4>
+                    <ul>
+                        <li><a href="https://discord.com/users/1480914309189206018" target="_blank">الدردشة المباشرة على Discord</a></li>
+                        <li><a href="mailto:cxfloveyou520@outlook.com">البريد الملكي: cxfloveyou520@outlook.com</a></li>
+                        <li>⏰ وقت الرد: لا يتجاوز ٦ ساعات عمل</li>
+                        <li>📍 نخدم: الرياض، دبي، الدوحة، المنامة</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© ٢٠٢٤ Diamond Premium. كل الحقوق محفوظة. صنع بكل الفخر لأصحاب العقول الطموحة في عالمنا العربي.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // 卡片悬停效果增强
+        document.querySelectorAll('.audience-card, .portfolio-item, .contact-card, .pricing-card').forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+                if (this.classList.contains('pricing-card') && window.innerWidth <= 1200) return;
+                
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateY = (x - centerX) / 20;
+                const rotateX = (centerY - y) / 20;
+                this.style.transform = `translateY(-20px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', function() {
+                if (this.classList.contains('pricing-card') && this.classList.contains('featured') && window.innerWidth > 1200) {
+                    this.style.transform = 'scale(1.05) translateY(0) rotateX(0) rotateY(0)';
+                } else {
+                    this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+                }
+            });
+        });
+
+        // 阿拉伯语数字转换
+        document.addEventListener('DOMContentLoaded', function() {
+            const nums = document.querySelectorAll('h4, .audience-tag, .comparison-value, .pricing-price, .pricing-value strong');
+            nums.forEach(el => {
+                el.textContent = el.textContent
+                    .replace(/0/g, '٠').replace(/1/g, '١')
+                    .replace(/2/g, '٢').replace(/3/g, '٣')
+                    .replace(/4/g, '٤').replace(/5/g, '٥')
+                    .replace(/6/g, '٦').replace(/7/g, '٧')
+                    .replace(/8/g, '٨').replace(/9/g, '٩')
+                    .replace(/%/g, '٪')
+                    .replace(/\$/g, '');
+            });
+            
+            // 在价格前加回美元符号
+            document.querySelectorAll('.pricing-price').forEach(price => {
+                price.innerHTML = '$' + price.innerHTML;
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
